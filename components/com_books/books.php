@@ -1,16 +1,16 @@
 <?php
 /**
- * @package     Joomla.Site
- * @subpackage  com_weblinks
- *
- * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @copyright	Copyright (c) 2013 Skyline Technology Ltd (http://extstore.com). All rights reserved.
+ * @license		http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
+// No direct access.
 defined('_JEXEC') or die;
 
-require_once JPATH_COMPONENT.'/helpers/route.php';
+// Include dependancies
+//require_once __DIR__ . '/helpers/books.php';
+//require_once __DIR__ . '/helpers/route.php';
 
 $controller	= JControllerLegacy::getInstance('Books');
-$controller->execute(JFactory::getApplication()->input->get('task'));
+$controller->execute(JFactory::getApplication()->input->getCmd('task'));
 $controller->redirect();
